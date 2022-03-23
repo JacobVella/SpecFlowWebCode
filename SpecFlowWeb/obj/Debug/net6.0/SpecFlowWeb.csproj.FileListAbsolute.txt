@@ -1,0 +1,12 @@
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\bin\Debug\net6.0\SpecFlowWeb.deps.json
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\bin\Debug\net6.0\SpecFlowWeb.dll
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\bin\Debug\net6.0\SpecFlowWeb.pdb
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.csproj.AssemblyReference.cache
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.AssemblyInfoInputs.cache
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.AssemblyInfo.cs
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.csproj.CoreCompileInputs.cache
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.dll
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\refint\SpecFlowWeb.dll
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\SpecFlowWeb.pdb
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb\obj\Debug\net6.0\ref\SpecFlowWeb.dll
