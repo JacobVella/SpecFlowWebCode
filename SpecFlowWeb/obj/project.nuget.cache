@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "klozjl9w0v6aoRz64smnnvglIeJIlwa29nOz1Xkie9BZ/i6AWx1Kg2UBik3x9LDvK31fwLFKZjymWWFV6QVdng==",
+  "dgSpecHash": "Xo5QdSFoBz7LZ0MAfPIbHu07/2oeRbWnZsr++OwfBtsDM4CDRl1LbFAvwHzi8xxmXAyt6oD5pf1RkbBhxqO0rA==",
   "success": true,
   "projectFilePath": "C:\\Users\\QBXW78\\source\\repos\\SpecFlowWeb\\SpecFlowWeb\\SpecFlowWeb.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\QBXW78\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\QBXW78\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

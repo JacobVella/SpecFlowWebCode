@@ -25,6 +25,7 @@ namespace SpecFlowWeb.Specs.Drivers
             _scenariocontext.Set(driver, "WebDriver");
 
             driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("https://www.google.com/");
             return driver;
         }
     }

@@ -13,7 +13,7 @@ namespace SpecFlowWeb.Specs.Hooks
 
         public HooksInitalization(ScenarioContext scenariocontext) => _scenariocontext = scenariocontext;
 
-        [BeforeScenario("@tag1")]
+        [BeforeScenario("@tag")]
         public void BeforeScenarioWithTag()
         {
             _scenariocontext.Get<SeleniumDriver>("SeleniumDriver").Setup();

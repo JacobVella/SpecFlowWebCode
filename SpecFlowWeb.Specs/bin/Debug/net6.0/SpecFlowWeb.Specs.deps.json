@@ -12,6 +12,7 @@
           "Microsoft.NET.Test.Sdk": "17.0.0",
           "NUnit3TestAdapter": "4.1.0",
           "Selenium.WebDriver": "4.1.0",
+          "Selenium.WebDriver.ChromeDriver": "99.0.4844.5100",
           "SpecFlow.NUnit": "3.9.40",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57",
           "SpecFlowWeb": "1.0.0",
@@ -430,6 +431,7 @@
           }
         }
       },
+      "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {},
       "SpecFlow/3.9.40": {
         "dependencies": {
           "BoDi": "1.5.0",
@@ -1000,6 +1002,9 @@
         }
       },
       "SpecFlowWeb/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.1.0"
+        },
         "runtime": {
           "SpecFlowWeb.dll": {}
         }
@@ -1235,6 +1240,13 @@
       "sha512": "sha512-d4smisz4a/wJCM2TzkKTl+BLfvZUTvaobhKElDfCVZlvY8ThsC8VAoBNWTlg1H/GGzIP//yVGko/W0FILTgkYA==",
       "path": "selenium.webdriver/4.1.0",
       "hashPath": "selenium.webdriver.4.1.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-021uEuHHgaZ9X2oSCaClBun+azybXg5lw/Pq79fc3D98X0oEpHPuXRTRthxzmqTwH6CGnRNfTvHMZ9xdvHDLzQ==",
+      "path": "selenium.webdriver.chromedriver/99.0.4844.5100",
+      "hashPath": "selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512"
     },
     "SpecFlow/3.9.40": {
       "type": "package",

@@ -5,8 +5,5 @@ search a web page for a given key word and return back the amount of times it wa
 @tag1
 Scenario: Scan a Web Page for Number of times a key word appears on that page
 	Given Open Google Chrome Page
-	And the search bar is selected
-	And the keyword is entered
-	And enter is pressed
-	When key word is found on the page
-	Then check if key word was found 10 times
+	When Search for a keyword
+	Then Get 10 results of the key word
