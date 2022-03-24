@@ -15,8 +15,7 @@ namespace SpecFlowWeb.Specs.StepDefinitions
     public class SearchStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
-        private readonly string keyword = "dog";
-        //ChromeDriver chromedriver;
+        private string keyword = "dog";
         IWebDriver driver;
 
         public SearchStepDefinitions(ScenarioContext scenarioContext)
@@ -36,9 +35,6 @@ namespace SpecFlowWeb.Specs.StepDefinitions
 
             driver.Navigate().GoToUrl("https://www.google.com/");
             Thread.Sleep(2000);
-            // SeleniumDriver selenDriver = new SeleniumDriver(_scenarioContext);
-            // _scenarioContext.Set(selenDriver, "SeleniumDriver");
-            // _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
 
 
         }
@@ -48,25 +44,24 @@ namespace SpecFlowWeb.Specs.StepDefinitions
         {
             IWebElement e = driver.FindElement(By.Name("q"));
             e.SendKeys(keyword);
-            //IWebElement p = e.FindElement(By.Name("btnK"));
             e.Submit();
         }
 
         [Then(@"Get (.*) results of the key word")]
         public void ThenGetResultsOfTheKeyWord(int numOfResults)
         {
-
-            while(numOfResults < 10)
+            numOfResults = 0;
+            WebDriverWait wait = new WebDriverWait(driver, (TimeSpan.FromSeconds(20)));
+            while (numOfResults < 10)
             {
-                IWebElement textfield = driver.FindElement(By.Name(keyword));
-                if(textfield.Equals(keyword))
+               
+                if(driver.PageSource.Contains(keyword))
                 {
                     numOfResults++;
                 }
-                Console.WriteLine("hi i was hit");
             }
 
-            Assert.AreEqual(numOfResults, 10);
+            Assert.AreEqual(10, numOfResults);
         }
     }
 
