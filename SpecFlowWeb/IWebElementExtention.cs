@@ -9,6 +9,7 @@ namespace SpecFlowWeb
 {
     public static class IWebElementExtention
     {
+        
 
         public static void EnterText(this IWebElement element, string text)
         {
@@ -21,7 +22,11 @@ namespace SpecFlowWeb
 
         public static void ClickOnSearchBar(this IWebElement element)
         {
-
+            //IWebDriver driver;
+            string keyword = "dog";
+            element.SendKeys(keyword);
+            IWebElement e = element.FindElement(By.Name("btnK"));
+            e.Submit();
         }
 
         public static void PressEnter(this IWebElement element)

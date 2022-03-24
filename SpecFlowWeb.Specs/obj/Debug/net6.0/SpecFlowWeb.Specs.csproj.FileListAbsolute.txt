@@ -115,3 +115,4 @@ C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb.Specs\obj\Debug\net6.0\Spec
 C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb.Specs\obj\Debug\net6.0\ref\SpecFlowWeb.Specs.dll
 C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb.Specs\bin\Debug\net6.0\WebDriver.dll
 C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb.Specs\bin\Debug\net6.0\SpecFlowWeb.Specs.dll.config
+C:\Users\QBXW78\source\repos\SpecFlowWeb\SpecFlowWeb.Specs\bin\Debug\net6.0\WebDriver.Support.dll

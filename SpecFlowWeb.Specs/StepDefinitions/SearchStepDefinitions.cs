@@ -4,6 +4,10 @@ using SpecFlowWeb.Specs.Drivers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SpecFlowWeb;
+using OpenQA.Selenium.Support.UI;
+using System.Collections.Generic;
+using System.Diagnostics;
+using NUnit.Framework;
 
 namespace SpecFlowWeb.Specs.StepDefinitions
 {
@@ -12,7 +16,8 @@ namespace SpecFlowWeb.Specs.StepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
         private readonly string keyword = "dog";
-        IWebElement element;
+        //ChromeDriver chromedriver;
+        IWebDriver driver;
 
         public SearchStepDefinitions(ScenarioContext scenarioContext)
         {
@@ -23,30 +28,45 @@ namespace SpecFlowWeb.Specs.StepDefinitions
         [Given(@"Open Google Chrome Page")]
         public void GivenOpenGoogleChromePage()
         {
-            SeleniumDriver webDriver = new SeleniumDriver(_scenarioContext);
-            _scenarioContext.Set(webDriver, "SeleniumDriver");
-            _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
-            
-            
+            driver = new ChromeDriver(@"C:\Users\QBXW78\source\repos\seleniumConnectionTest\seleniumConnectionTest\Driver\");
+
+            _scenarioContext.Set(driver, "WebDriver");
+
+            driver.Manage().Window.Maximize();
+
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            Thread.Sleep(2000);
+            // SeleniumDriver selenDriver = new SeleniumDriver(_scenarioContext);
+            // _scenarioContext.Set(selenDriver, "SeleniumDriver");
+            // _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
+
+
         }
 
         [When(@"Search for a keyword")]
         public void WhenSearchingAKeyword()
         {
-            // trying to get an instance of both the webdriver and the IWebElement here, but having issue doing so
-            //click search bar
-            IWebElementExtention.EnterText(element,keyword);//enter word
-            //element = webDriver.FindElement(By.Id("")).Click();//may not work here due to the search bar not having an id, find a work around
-            //element.Click();
-            //hit enter or search
-
-
+            IWebElement e = driver.FindElement(By.Name("q"));
+            e.SendKeys(keyword);
+            //IWebElement p = e.FindElement(By.Name("btnK"));
+            e.Submit();
         }
 
         [Then(@"Get (.*) results of the key word")]
-        public void ThenGetResultsOfTheKeyWord(int p0)
+        public void ThenGetResultsOfTheKeyWord(int numOfResults)
         {
-            //use find element and return the # in a for loop
+
+            while(numOfResults < 10)
+            {
+                IWebElement textfield = driver.FindElement(By.Name(keyword));
+                if(textfield.Equals(keyword))
+                {
+                    numOfResults++;
+                }
+                Console.WriteLine("hi i was hit");
+            }
+
+            Assert.AreEqual(numOfResults, 10);
         }
     }
 
