@@ -42,7 +42,7 @@ namespace SpecFlowWeb.Specs.StepDefinitions
         [When(@"Search for a '(.*)'")]
         public void WhenSearchingAKeyword(string keyword)
         {
-            keywordStep = keyword;
+            keywordStepDefInstance = keyword;
             IWebElement e = driver.FindElement(By.Name("q"));
             e.SendKeys(keyword);
             e.Submit();
@@ -57,7 +57,7 @@ namespace SpecFlowWeb.Specs.StepDefinitions
             while (numOfTries < numOfResults)
             {
                
-                if(driver.PageSource.Contains(keywordStep))
+                if(driver.PageSource.Contains(keywordStepDefInstance))
                 {
                     actualResults++;
                     numOfTries++;
