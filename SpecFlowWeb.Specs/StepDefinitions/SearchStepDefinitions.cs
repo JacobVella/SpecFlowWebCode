@@ -15,7 +15,7 @@ namespace SpecFlowWeb.Specs.StepDefinitions
     public class SearchStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
-        private string keyword = "dog";
+        private string keywordStepDefInstance = null;
         IWebDriver driver;
 
         public SearchStepDefinitions(ScenarioContext scenarioContext)
@@ -39,9 +39,10 @@ namespace SpecFlowWeb.Specs.StepDefinitions
 
         }
 
-        [When(@"Search for a keyword")]
-        public void WhenSearchingAKeyword()
+        [When(@"Search for a '(.*)'")]
+        public void WhenSearchingAKeyword(string keyword)
         {
+            keywordStep = keyword;
             IWebElement e = driver.FindElement(By.Name("q"));
             e.SendKeys(keyword);
             e.Submit();
@@ -50,18 +51,20 @@ namespace SpecFlowWeb.Specs.StepDefinitions
         [Then(@"Get (.*) results of the key word")]
         public void ThenGetResultsOfTheKeyWord(int numOfResults)
         {
-            numOfResults = 0;
+            int numOfTries = 0;
+            int actualResults = 0;
             WebDriverWait wait = new WebDriverWait(driver, (TimeSpan.FromSeconds(20)));
-            while (numOfResults < 10)
+            while (numOfTries < numOfResults)
             {
                
-                if(driver.PageSource.Contains(keyword))
+                if(driver.PageSource.Contains(keywordStep))
                 {
-                    numOfResults++;
+                    actualResults++;
+                    numOfTries++;
                 }
             }
 
-            Assert.AreEqual(10, numOfResults);
+            Assert.AreEqual(numOfResults, actualResults);
         }
     }
 
